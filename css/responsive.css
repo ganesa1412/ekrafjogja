@@ -5,8 +5,13 @@
         display: block !important;
 		padding: 128px 24px !important;
     }
+	.main-banner-slider video{
+		min-height: 80vh;
+		transform: scale(2.5);
+		filter: brightness(0.5);
+	}
 	.banner_text h2{
-		font-size: 2em;
+		font-size: 1.5em;
 	}
 	.banner_text h2, .banner_text p{
 		width: 100% !important;
