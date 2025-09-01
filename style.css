@@ -1,6 +1,11 @@
 /* CUSTOM */
+#home-navbar{
+	background-position: right;
+	background-repeat: no-repeat;
+}
 #home-navbar:not(.sticky){
 	background-color: transparent;
+	background-image: url(images/nav-ellipse.png);
 }
 .navigation {
   display: flex;
@@ -259,7 +264,7 @@
 	background-color: #151C33 !important;
 	border-radius: 18px;
 	border-top: none !important;
-	background-image: url(images/bergabung.jpg);
+	background-image: url(images/bergabung2.png);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: right;
@@ -414,7 +419,18 @@ height: 40px !important;
 	height: 210px;
 	object-fit: cover;
 }
-
+.nav-lang{
+	margin-top: -6px;
+}
+.nav-lang span{
+	margin: 0 8px;
+}
+.nav-lang a{
+	color: rgba(255,255,255,0.6);
+}
+.nav-lang span, .nav-lang a.active{
+	color: #fff;
+}
 /* Custom end */
 
 /*=====================================================================================
@@ -627,6 +643,37 @@ height: 40px !important;
 	color: white;
 	font-size: 14px;
 }
+.main-banner-slider .overlay:before{
+	background-image: url(images/banner-overlay.png) !important;
+	background-position: bottom left;
+	background-size: cover;
+	z-index: 2;
+	opacity: 1 !important;
+	background-color: transparent !important;
+}
+.theme_btn.line-animation{
+	position:relative;
+	margin:auto;
+}
+.theme_btn.line-animation:before{
+	content:"";
+	background-color: transparent;
+	z-index: -1;
+	border-radius: 20px;
+	border: 1px solid #fff;
+	width:100%;
+	height:100%;
+	position:absolute;
+	top: 0px;
+	left: 0px;
+	opacity:0;
+	transition-duration: 0.25s;
+}
+.theme_btn.line-animation:hover:before{
+	opacity: 1;
+	top: 6px;
+	left: 6px;
+}
 /*
 	==================================
 		CITY TOP WRAP END
@@ -667,21 +714,22 @@ height: 40px !important;
 .navigation > ul > li > a{
 	display:inline-block;
 	color:#fff;
-	font-size:15px;
+	font-size:14px;
 	text-transform:capitalize;
 }
 .city_top_search{
 	position:relative;
 	float:left;
 	width:90%;
-	padding-left: 24px;
-	border-left: 1px solid #b40001;
+	padding: 6px 24px;
+	border-radius: 24px;
 	margin-top: -12px;
+	background: rgba(0, 0, 0, 0.5);
 }
 .city_top_search input{
 	padding:0px 0px;
 	height:auto;
-	font-size:15px;
+	font-size:14px;
 	color:#fff;
 	background:none;
 	border:none;
@@ -803,7 +851,7 @@ height: 40px !important;
 	left:0px;
 	right:0px;
 	width:100% !important;
-	text-align: center;
+	text-align: left;
 	display: flex;
 	align-items: center;
 	height: 100% !important;

@@ -6,12 +6,15 @@
 		padding: 128px 24px !important;
     }
 	.main-banner-slider video{
-		min-height: 80vh;
-		transform: scale(2.5);
+		min-height: 64vh;
+        transform: scale(2);
 		filter: brightness(0.5);
 	}
 	.banner_text h2{
-		font-size: 1.5em;
+		font-size: 1.1em;
+	}
+	.banner_text p{
+		font-size: 0.8em;
 	}
 	.banner_text h2, .banner_text p{
 		width: 100% !important;
@@ -2308,6 +2311,13 @@
 	.city_comment_form_login .theam_btn{
 		text-align:center;
 		width:100%;
+	}
+	.nav-lang{
+		position: absolute;
+		top: 0px;
+		left: 50%;
+		text-align: right;
+		margin-top: 16px;
 	}
 }
 @media (max-width: 320px){

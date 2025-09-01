@@ -752,3 +752,70 @@ jQuery(document).ready(function($){
 
 		marker.setMap(map);
 	}
+
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+    pageLanguage: 'id',
+    includedLanguages: 'en', // Customize this list
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+    autoDisplay: false
+    }, 'google_translate_element');
+  }
+  
+  // FireEvent helper
+  function fireEvent(el, event) {
+    if (document.createEventObject) {
+      const evt = document.createEventObject();
+      return el.fireEvent('on' + event, evt);
+    } else {
+      const evt = document.createEvent('HTMLEvents');
+      evt.initEvent(event, true, true);
+      return !el.dispatchEvent(evt);
+    }
+  }
+
+  // Trigger translation (via widget if loaded, fallback to hash+reload)
+  function triggerLanguage(lang) {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      fireEvent(select, 'change');
+    } else {
+      if (lang === "en") {
+        window.location.hash = "googtrans(id|en)";
+      } else {
+        window.location.hash = "googtrans(en|id)";
+      }
+      location.reload();
+    }
+  }
+
+  // On load: set active class based on hash
+  window.addEventListener("load", function () {
+    const hash = window.location.hash;
+    const idBtn = document.getElementById("lang-id");
+    const enBtn = document.getElementById("lang-en");
+
+    if (hash.includes("id|en")) {
+      enBtn.classList.add("active");
+      idBtn.classList.remove("active");
+      document.querySelector(".city_top_navigation").style.marginTop = "35px";
+    } else {
+      idBtn.classList.add("active");
+      enBtn.classList.remove("active");
+    }
+    
+    history.replaceState(null, null, window.location.pathname + window.location.search);
+  });
+
+  // EN button
+  document.getElementById("lang-en").addEventListener("click", function (e) {
+    e.preventDefault();
+    triggerLanguage("en");
+  });
+
+  // ID button
+  document.getElementById("lang-id").addEventListener("click", function (e) {
+    e.preventDefault();
+    triggerLanguage("id");
+  });
