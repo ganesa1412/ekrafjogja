@@ -73,13 +73,13 @@
   z-index: 1;
 }
 .banner_text h1{
-	font-size: 40px;
+	font-size: 64px;
 	text-transform: uppercase;
 	font-weight: 600;
 	line-height: 1.25;
 }
 .banner_text h2{
-	font-size: 32px;
+	font-size: 24px;
 	text-transform: uppercase;
 	font-weight: 500;
 	line-height: 1.25;
@@ -197,9 +197,9 @@
 	text-transform: uppercase;
 }
 .city_project_wrap{
-	background-image: url(images/ekraf.png);
+	background-image: url(images/ekraf-ellipse.png);
 	background-size: contain;
-	background-position: left;
+	background-position: right;
 	background-repeat: no-repeat;
 	padding: 4em 0 !important;
 }
@@ -208,8 +208,12 @@
 	padding: 24px 0;
 }
 .city_banner_services.bg-danger{
+	background-image: url(images/pattern-counter.png);
 	background-color: #D83135;
-	border-bottom: 12px solid #374C91;
+	background-size: contain;
+	background-position: bottom right;
+	background-repeat: repeat-x;
+	/* border-bottom: 12px solid #374C91; */
 }
 .city_banner_services a{
 	border-bottom: 2px solid #fff;
@@ -221,19 +225,27 @@
 .city_service_list ul li:before{
 	display: none;
 }
+.city_news_wrap .section_heading.center h2, .city_news_text h3 a, .city_news_text p, .city_news_meta li {
+	color: #fff;
+}
 .city_news_text h3{
-	font-size: 24px;
+	font-size: 18px;
 	font-weight: 700;
 	text-transform: uppercase;
 }
+.city_news_fig{
+	position:relative;
+	z-index: 2;
+}
 .city_news_fig img{
-	height: 270px;
+	height: 200px;
 	object-fit: cover;
 }
 .city_news_wrap{
-	background-image: url(images/ekraf.png);
-	background-size: contain;
-	background-position: right;
+	padding: 64px 0 !important;
+	background-image: url(images/feature-bg.png);
+	background-size: cover;
+	background-position: center;
 	background-repeat: no-repeat;
 }
 .city_news_fig .box{
@@ -241,34 +253,76 @@
 	transition-duration: 0.5s;
 }
 .city_news_fig:hover .box{
-	box-shadow: 5px 5px 0px #598CF9;
+	box-shadow: 5px 5px 0px #E33A3A;
+	background-color: white;
 }
 .city_news_fig h3 a{
 	transition-duration: 0.5s;
 }
-.city_news_fig h3 a:hover{
-	color: #2059de;
+.city_news_fig span{
+	z-index: 3;
+}
+.city_news_fig figure,.city_news_fig .city_news_text{
+	position: relative;
+	z-index: 2;
+}
+.city_news_fig:before{
+	content:"";
+	position:absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	border-radius: 24px;
+	background: #fff;
+	transform: scale(1.1);
+	transition-duration: 0.5s;
+	opacity:0;
+	z-index: 1;
+}
+.city_news_fig:hover:before{
+	opacity:1;
+}
+.city_news_fig:hover .city_news_wrap .section_heading.center h2, .city_news_fig:hover .city_news_text h3 a, .city_news_fig:hover .city_news_text p, .city_news_fig:hover .city_news_meta li {
+	color: #292929 !important;
 }
 .city_news_meta{
 	margin-top: -16px;
 }
 .city_news_wrap .theme_btn{
-	padding: 6px 36px;
-	margin-top: 3em;
-	background-color: #82B2FF;
+	/* padding: 6px 36px; */
+	margin-top: 2em !important;
+	/* position:relative; */
+	z-index: 2;
+}
+.city_news_wrap .theme_btn:before{
+	z-index: -1 !important;
 }
 .city_request_wrap{
 	padding: 4em 0;
+	background: url(images/cta-bg.png);
+	background-size: 100% 100%;
+}
+.city_request_wrap .city_service_list{
+	margin-bottom: 1em;
+}
+.city_request_row{
+	height: 350px;
+	background-image: url(images/bergabung2.png);
+	background-size: auto 100%;
+	background-repeat: no-repeat;
+	background-position: right;
+	padding: 32px;
+	border-radius: 20px;
 }
 .city_request_list{
 	background-color: #151C33 !important;
 	border-radius: 18px;
 	border-top: none !important;
-	background-image: url(images/bergabung2.png);
-	background-size: auto 100%;
-	background-repeat: no-repeat;
-	background-position: right;
+	background: url(images/cta-box-bg.png);
+	background-size: 100% 100%;
 	height: 350px;
+	padding:0 !important;
 }
 .city_request_list span{
 	color: #fff !important;
@@ -407,7 +461,7 @@ height: 40px !important;
 	margin-bottom: 8px !important;
 }
 .city_news_text{
-	min-height: 350px;
+	min-height: 250px;
 }
 .city_blog_wrap, .city_project_detail, .sidebar_project, .city_blog2_fig{
 	margin-top: 72px;
@@ -430,6 +484,17 @@ height: 40px !important;
 }
 .nav-lang span, .nav-lang a.active{
 	color: #fff;
+}
+.section_heading.center:before{
+	border: none !important;
+}
+.section_heading.center{
+	padding-bottom: 12px !important
+}
+.section_heading.center h2{
+	font-size: 32px;
+	font-weight: 500;
+	text-transform: uppercase;
 }
 /* Custom end */
 
@@ -714,7 +779,7 @@ height: 40px !important;
 .navigation > ul > li > a{
 	display:inline-block;
 	color:#fff;
-	font-size:14px;
+	font-size:13px;
 	text-transform:capitalize;
 }
 .city_top_search{
@@ -729,7 +794,7 @@ height: 40px !important;
 .city_top_search input{
 	padding:0px 0px;
 	height:auto;
-	font-size:14px;
+	font-size:13px;
 	color:#fff;
 	background:none;
 	border:none;
@@ -855,7 +920,7 @@ height: 40px !important;
 	display: flex;
 	align-items: center;
 	height: 100% !important;
-	border-bottom: 12px solid #374C91;
+	/* border-bottom: 12px solid #374C91; */
 }
 .banner_text_wrapper{
 	max-height: 200px;

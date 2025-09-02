@@ -10,8 +10,11 @@
         transform: scale(2);
 		filter: brightness(0.5);
 	}
+	.banner_text h1{
+		font-size: 2em;
+	}
 	.banner_text h2{
-		font-size: 1.1em;
+		font-size: 1em;
 	}
 	.banner_text p{
 		font-size: 0.8em;
@@ -28,7 +31,7 @@
 	}
 	.city_project_fig span, .city_news_fig span{
 		position: relative !important;
-		z-index: 2;
+		z-index: 3;
 		float: right;
 		top: 16px;
 	}
@@ -39,6 +42,7 @@
 		padding: 16px 0 !important;
 	}
 	.city_request_list{
+		background-size:cover;
 		position: relative;
 		padding: 0px !important;
 	}
@@ -48,6 +52,7 @@
 		height: 350px;
 		border-radius: 18px;
 		padding: 32px 16px;
+		background-image:none;
 	}
 
 	.city_request_text{
