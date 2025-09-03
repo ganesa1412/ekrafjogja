@@ -2324,6 +2324,9 @@
 		text-align: right;
 		margin-top: 16px;
 	}
+	.about_wrap:before{
+		display: none;
+	}
 }
 @media (max-width: 320px){
 	
