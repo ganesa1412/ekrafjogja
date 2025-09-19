@@ -106,6 +106,23 @@
 	.city_department_fig img{
 		width: 100%;
 	}
+	.subsector-btn{
+		display: none;
+	}
+	.subsectors-desc-panel{
+		position: static;
+		opacity: 1;
+		visibility: visible;
+		margin-top: 48px;
+		display: block;
+		width: 100%;
+	}
+	.subsectors-desc-panel img{
+		width: 100%;
+	}
+	.city_project_wrap{
+		height: auto;
+	}
 }
 
 /* CUSTOM END */
@@ -161,6 +178,10 @@
 	.city_visit_text.text2{
 		padding:29px 50px 30px 0px;
 	}
+	.city_blog2_text p{
+		text-align: left;
+	}
+	
 }
 /*
 =================================================

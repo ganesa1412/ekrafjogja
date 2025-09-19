@@ -13,6 +13,11 @@ jQuery(document).ready(function($){
       var link = $(this).find('h3').find('a').attr('href');
       window.location.href = link;
     })
+
+    $('.subsector-btn').on('click', function() {
+      $('.subsectors-desc-panel').removeClass('active');
+      $('#'+$(this).attr('data-target')).addClass('active');
+    });
 	
 	/*
 	==============================================================
