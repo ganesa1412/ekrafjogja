@@ -214,11 +214,11 @@
 	background-repeat: repeat-x;
 	/* border-bottom: 12px solid #374C91; */
 }
-.city_banner_services a{
+.city_banner_services h5{
 	border-bottom: 2px solid #fff;
-	padding: 4px 8px;
+	padding: 4px 8px !important;
 }
-.city_banner_services a, .city_banner_services a strong{
+.city_banner_services h5, .city_banner_services h5 strong{
 	color: #fff !important;
 }
 .city_service_list ul li:before{
@@ -6585,12 +6585,12 @@ height: 40px !important;
 .city_blog_fig:hover .box img,
 .city_department_fig:hover .box img,
 .box:hover img{
-    transform:scale(1.5) rotate(10deg);
+    /* transform:scale(1.5) rotate(10deg);
 	-moz-transform:scale(1.5) rotate(10deg);
-	-webkit-transform:scale(1.5) rotate(10deg);
+	-webkit-transform:scale(1.5) rotate(10deg); */
 }
 .city_health_service2:hover .city_health_list > span i{
-	transform:scale(1.2) rotate(10deg);
+	/* transform:scale(1.2) rotate(10deg);
 	-moz-transform:scale(1.2) rotate(10deg);
-	-webkit-transform:scale(1.2) rotate(10deg);
+	-webkit-transform:scale(1.2) rotate(10deg); */
 }
