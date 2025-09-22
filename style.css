@@ -309,12 +309,22 @@
 }
 .city_request_row{
 	height: 350px;
-	background-image: url(images/bergabung2.png);
 	background-size: auto 100%;
 	background-repeat: no-repeat;
 	background-position: right;
 	padding: 32px;
 	border-radius: 20px;
+	animation: join-fade 21s infinite;
+}
+@keyframes join-fade {
+  0%        { background-image: url(images/join/1.jpeg); }
+  14.285%   { background-image: url(images/join/2.jpg); }
+  28.571%   { background-image: url(images/join/3.jpg); }
+  42.857%   { background-image: url(images/join/4.jpg); }
+  57.142%   { background-image: url(images/join/5.jpg); }
+  71.428%   { background-image: url(images/join/6.jpg); }
+  85.714%   { background-image: url(images/join/7.jpg); }
+  100%      { background-image: url(images/join/1.jpeg); } /* keep last image until loop restarts */
 }
 .city_request_list{
 	background-color: #151C33 !important;
@@ -457,7 +467,7 @@ height: 40px !important;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
-    height: 3em;
+    height: 4.3em;
 }
 .city_department_fig img{
 	width: 120px;
@@ -1422,6 +1432,7 @@ height: 40px !important;
 	padding: 10px 15px;
 	border: 1px solid #d7d7d7;
 	margin: 0px 0px 35px;
+	min-height: 205px;
 }
 .city_department_fig figure{
 	width:auto;
