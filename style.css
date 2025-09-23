@@ -199,8 +199,9 @@
 .city_project_wrap{
 	padding: 4em 0;
 	background-image: url(images/subsectors-bg.png);
-	background-size: cover;
+	background-size: 100% auto;
 	background-repeat: no-repeat;
+	background-position: top;
 }
 .city_banner_services:not(.bg-danger){
 	border-bottom: none !important;
@@ -546,7 +547,7 @@ height: 40px !important;
 }
 
 .city_project_wrap{
-	height: 1080px;
+	height: 960px;
 	padding: 70px 20px !important;
 }
 .subsectors-row .subsectors-top img,.subsectors-row .subsectors-bottom img{
@@ -563,35 +564,39 @@ height: 40px !important;
 	border-color: #FF7C7C;
 }
 .subsectors-row .subsectors-top img:nth-child(1),.subsectors-row .subsectors-top img:nth-child(9){
-	transform: scale(1) translateY(120px) !important;
+	transform: scale(1) translateY(100px) !important;
 }
 .subsectors-row .subsectors-top img:nth-child(2),.subsectors-row .subsectors-top img:nth-child(8){
-	transform: scale(1) translateY(40px) !important;
+	transform: scale(1) translateY(0px) !important;
 }
 .subsectors-row .subsectors-top img:nth-child(3),.subsectors-row .subsectors-top img:nth-child(7){
-	transform: scale(1) translateY(-20px) !important;
+	transform: scale(1) translateY(-60px) !important;
 }
 .subsectors-row .subsectors-top img:nth-child(4),.subsectors-row .subsectors-top img:nth-child(6){
-	transform: scale(1) translateY(-60px) !important;
+	transform: scale(1) translateY(-100px) !important;
 }
 .subsectors-row .subsectors-top img:nth-child(5){
-	transform: scale(1) translateY(-80px) !important;
+	transform: scale(1) translateY(-120px) !important;
 }
 .subsectors-row .subsectors-bottom img:nth-child(1),.subsectors-row .subsectors-bottom img:nth-child(8){
-	transform: scale(1) translateY(120px) !important;
+	transform: scale(1) translateY(100px) !important;
 }
 .subsectors-row .subsectors-bottom img:nth-child(2),.subsectors-row .subsectors-bottom img:nth-child(7){
-	transform: scale(1) translateY(40px) !important;	
+	transform: scale(1) translateY(0px) !important;	
 }
 .subsectors-row .subsectors-bottom img:nth-child(3),.subsectors-row .subsectors-bottom img:nth-child(6){
-	transform: scale(1) translateY(-20px) !important;
+	transform: scale(1) translateY(-60px) !important;
 }
 .subsectors-row .subsectors-bottom img:nth-child(4),.subsectors-row .subsectors-bottom img:nth-child(5){
-	transform: scale(1) translateY(-60px) !important;
+	transform: scale(1) translateY(-100px) !important;
 }
 .subsector-btn{
 	position: relative;
 	z-index: 2;
+}
+img.subsector-btn.active{
+	border-color: #FF7C7C !important;
+	width: 90px;
 }
 .subsectors-desc{
 	position: relative;
@@ -611,7 +616,7 @@ height: 40px !important;
 	right: 0;
 	opacity: 0;
 	visibility: hidden;
-	transform: translateY(-20px);
+	margin-top: 4em;
 	transition-duration: 0.5s;
 }
 .subsectors-desc-panel.active{

@@ -15,8 +15,13 @@ jQuery(document).ready(function($){
     })
 
     $('.subsector-btn').on('click', function() {
+      $('.subsector-btn').removeClass('active');
+      $(this).addClass('active');
       $('.subsectors-desc-panel').removeClass('active');
       $('#'+$(this).attr('data-target')).addClass('active');
+      $('html, body').animate({
+          scrollTop: $('.subsectors-desc-panel').offset().top - 150
+      }, 600); // 600 = animation speed in ms
     });
 	
 	/*
