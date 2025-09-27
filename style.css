@@ -174,6 +174,16 @@
 }
 .city_project_fig, .city_news_fig{
 	position: relative;
+	margin-bottom: 2em;
+}
+.city_news_fig{
+	min-height: 520px !important;
+}
+.city_news_fig p{
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 5;    /* number of lines to show */
+	overflow: hidden;
 }
 .city_project_fig span, .city_news_fig span{
 	position: absolute;
@@ -636,6 +646,32 @@ img.subsector-btn.active{
 }
 .about-video{
 	background: #f3fdff;
+}
+.pagination ul li.active a{
+	background-color: #E33A3A;
+	color: #fff;
+}
+.city_project_detail .section_heading, .city_blog2_text .section_heading{
+	 margin-bottom: 1em !important;
+}
+.city_project_detail .city_project_description{
+	padding: 0;
+}
+.city_project_detail .section_heading h1{
+	line-height: 1em;
+}
+.city_blog2_text ul{
+	padding: 0 24px;
+}
+.city_blog2_text ul:not(.city_meta_list) li{
+	list-style: disc;
+}
+.city_blog2_text h1{
+	font-size: 32px;
+	line-height: 36px;
+}
+.city_blog2_text h2{
+	font-size: 28px;
 }
 /* Custom end */
 
@@ -4833,7 +4869,7 @@ img.subsector-btn.active{
 }
 .city_blog2_fig.fig2 .city_blog2_text p{
 	padding-bottom:24px;
-	margin-bottom:30px;
+	margin-bottom:16px;
 	border-bottom:1px solid #cfcfcf;
 }
 .city_blog2_fig.fig2 .city_meta_list{
@@ -4882,7 +4918,7 @@ img.subsector-btn.active{
 }
 .blog_detail_row{
 	background-color:#fff;
-	padding:0px 30px;
+	padding:0px 30px 30px 30px;
 }
 .blog_detail_row .city_blog2_list{
 	padding:27px 0px 0px 0px !important;
