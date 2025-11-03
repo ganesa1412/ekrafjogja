@@ -51,13 +51,14 @@
 		background-color: rgb(0,0,0,0.5);
 		height: 350px;
 		border-radius: 18px;
-		padding: 32px 16px;
+		padding: 0px;
 		background-image:none;
 	}
 
 	.city_request_text{
 		width: 100%;
-		padding: 12px;
+		padding: 48px;
+        border-radius: 18px;
 	}
 	.city_request_text h2{
 		font-size: 24px;
@@ -122,6 +123,17 @@
 	}
 	.city_project_wrap{
 		height: auto;
+	}
+	.city_blog_wrap .section_heading h1 {
+		line-height: 1;
+		margin-bottom: 0;
+	}
+	.city_blog_wrap .section_heading{
+		margin-bottom: 24px !important;
+	}
+	.blog_detail_row h1{
+		line-height: 1;
+        font-size: 28px;
 	}
 }
 
@@ -2286,6 +2298,9 @@
 	/*project detail page start*/
 	.project_title {
 		font-size: 18px;
+		padding: 16px;
+        display: inline-block;
+        margin: 8px 0;
 	}
 	.city_project_detail{
 		padding:0px 20px;
