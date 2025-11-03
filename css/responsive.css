@@ -59,6 +59,7 @@
 		width: 100%;
 		padding: 48px;
         border-radius: 18px;
+		background-color: rgba(22, 28, 52, 0.6);
 	}
 	.city_request_text h2{
 		font-size: 24px;
@@ -133,7 +134,7 @@
 	}
 	.blog_detail_row h1{
 		line-height: 1;
-        font-size: 28px;
+        font-size: 24px;
 	}
 }
 
